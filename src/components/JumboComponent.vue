@@ -6,9 +6,14 @@ export default {
 </script>
 
 <template>
+
   <main>Jumbo</main>
+
 </template>
 
-<style>
-
+<style lang="scss" scoped>
+  main {
+    height: 350px;
+    background-color: black;
+  }
 </style>

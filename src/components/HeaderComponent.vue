@@ -66,18 +66,19 @@ export default {
 
   <header>
     <div class="container">
+
       <div class="logo">
-        <img src="../public/dc-logo.png" alt="Logo DC">
+        <img src="../../vue-dc-comics-1/img/dc-logo.png" alt="Logo DC">
       </div>
-      <div class="menu">
-        <ul>
+
+        <ul class="menu">
           <li
           v-for="(item, index) in menuItems"
           :key="index"
           :class="{'active' : item.current}"
           ><a :href="item.href">{{item.text}}</a></li>
         </ul>
-      </div>
+
     </div>
   </header>
 
@@ -87,11 +88,37 @@ export default {
 @use '../styles/partials/mixin' as *;
 @use '../styles/partials/variables' as *;
 
+  a {
+    color: inherit;
+  }
 
   header {
-    height: 250px;
-    @include flex();
+    height: 180px;
+    padding: 0 2.5rem;
+  }
+
+  .container {
+    @include flex('vertical');
     justify-content: space-between;
+    height: 100%
+  }
+
+  .menu {
+    @include flex();
+    height: 100%;
+    li {
+      height: 100%;
+      @include flex();
+      padding: 0 15px;
+      font-size: $bigger-font-size;
+      &:hover a {
+        color: $accent-color;
+      }
+      &.active {
+        color: $accent-color;
+        box-shadow: inset 0px -7px 0 0px $accent-color;
+      }
+    }
   }
 
 </style>
