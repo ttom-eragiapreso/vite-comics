@@ -66,12 +66,15 @@ export default {
 
   <header>
     <div class="container">
-      <div class="logo"></div>
+      <div class="logo">
+        <img src="../public/dc-logo.png" alt="Logo DC">
+      </div>
       <div class="menu">
         <ul>
           <li
           v-for="(item, index) in menuItems"
           :key="index"
+          :class="{'active' : item.current}"
           ><a :href="item.href">{{item.text}}</a></li>
         </ul>
       </div>
@@ -81,9 +84,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/partials/mixin' as *;
+@use '../styles/partials/variables' as *;
+
 
   header {
     height: 250px;
+    @include flex();
+    justify-content: space-between;
   }
 
 </style>
