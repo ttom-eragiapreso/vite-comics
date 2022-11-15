@@ -57,6 +57,12 @@ export default {
       },
     ]
     }
+  },
+  methods: {
+    activate(item){
+      this.menuItems.forEach(item => item.current = false);
+      item.current = true
+    }
   }
 
 }
@@ -76,6 +82,7 @@ export default {
           v-for="(item, index) in menuItems"
           :key="index"
           :class="{'active' : item.current}"
+          @click="activate(item)"
           ><a :href="item.href">{{item.text}}</a></li>
         </ul>
 
