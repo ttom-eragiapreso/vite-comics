@@ -74,7 +74,7 @@ export default {
     <div class="container">
 
       <div class="logo">
-        <img src="../../vue-dc-comics-1/img/dc-logo.png" alt="Logo DC">
+        <img src="/dc-logo.png" alt="Logo DC">
       </div>
 
         <ul class="menu">
