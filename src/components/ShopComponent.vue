@@ -53,9 +53,13 @@ export default {
 @use '../styles/partials/mixin' as *;
 @use '../styles/partials/variables' as *;
 
-img, svg {
+img {
   width: 70px;
 }
+.menu-item:last-child img {
+  width: 120px;
+}
+
 main {
   background-color: $accent-color;
   height: 200px;
