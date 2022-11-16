@@ -5,11 +5,6 @@ export default {
     img: String,
     title: String
   },
-  data(){
-    return {
- 
-    }
-  }
 }
 </script>
 
@@ -17,10 +12,13 @@ export default {
 <template>
   
   <div class="card">
+
     <div class="img">
       <img :src="img" alt="">
     </div>
+
     <span class="title">{{title}}</span>
+
   </div>
 
 </template>
@@ -30,20 +28,26 @@ export default {
 @use '../styles/partials/mixin' as *;
 @use '../styles/partials/variables' as *;
 
-.card {
-  width: calc(100% / 6);
-  aspect-ratio: 1/1;
-  border: 1px solid white;
-  color: white;
+  .card {
+    width: calc(100% / 6);
+    color: white;
+    font-size: $bigger-font-size;
+  }
+
+  .title {
+    display: inline-block;
+    max-width: 75%;
+  }
+
   .img {
+    width: 70%;
+  }
+
+  img {
     width: 100%;
     aspect-ratio: 1/1;
-    img {
-      width: 100%;
-      aspect-ratio: 1/1;
-      object-fit: contain;
-    }
+    object-fit: cover;
+    object-position: 0 0;
   }
-}
 
 </style>
