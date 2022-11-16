@@ -7,9 +7,6 @@ export default {
 
 <template>
   <div class="jumbotron">
-    <div class="container">
-      <p> --> content goes here &lt;-- </p>
-    </div>
   </div>
 
 </template>
@@ -19,15 +16,8 @@ export default {
 @use '../styles/partials/variables' as *;
 
   .jumbotron {
-    height: 150px;
-    background-color: black;
-    color: white;
-    @include flex('vertical');
+    background-image: url(../../vue-dc-comics-1/img/jumbotron.jpg);
+    height: 450px;
   }
 
-  .container {
-    display: flex;
-    align-items: center;
-    font-size: 3rem;
-  }
 </style>

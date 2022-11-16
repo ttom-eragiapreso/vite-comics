@@ -5,6 +5,7 @@ import JumboComponentVue from './components/JumboComponent.vue';
 import ShopComponentVue from './components/ShopComponent.vue';
 import FooterTopComponentVue from './components/FooterTopComponent.vue';
 import FooterBottomComponentVue from './components/FooterBottomComponent.vue';
+import ComicsComponentVue from './components/ComicsComponent.vue';
 export default {
   name: 'App',
   components: {
@@ -13,7 +14,7 @@ export default {
     ShopComponentVue,
     FooterBottomComponentVue,
     FooterTopComponentVue,
-
+    ComicsComponentVue
   },
 
   data(){
@@ -31,6 +32,7 @@ export default {
 <template>
   <HeaderComponentVue/>
   <JumboComponentVue/>
+  <ComicsComponentVue/>
   <ShopComponentVue/>
   <footer-top-component-vue/>
   <footer-bottom-component-vue/>
